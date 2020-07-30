@@ -7,9 +7,11 @@ var triangle = function(sideOne, sideTwo, sideThree){
   };
 
   
+  
   var isTriangle = function(sideOne, sideTwo, sideThree) {
     return sideOne <= (sideTwo + sideThree) && sideTwo <= (sideThree + sideOne) && sideThree <= (sideOne + sideTwo)
   };
+
 
 
   var triangleType = function(sideOne, sideTwo, sideThree){
@@ -31,10 +33,12 @@ var triangle = function(sideOne, sideTwo, sideThree){
       var sideTwo = parseInt($("input#sideTwo").val());
       var sideThree = parseInt($("input#sideThree").val());
       var result = triangle(sideOne, sideTwo, sideThree);
+
   
       sideOne = parseInt($("input#sideOne").val(""));
       sideTwo = parseInt($("input#sideTwo").val(""));
       sideThree = parseInt($("input#sideThree").val(""));
+
   
       $("#results").append(result= triangleType);
       event.preventDefault();
