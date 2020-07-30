@@ -5,7 +5,13 @@ var triangle = function(sideOne, sideTwo, sideThree){
       return "Not a triangle.";
     }
   };
+
   
+  var isTriangle = function(sideOne, sideTwo, sideThree) {
+    return sideOne <= (sideTwo + sideThree) && sideTwo <= (sideThree + sideOne) && sideThree <= (sideOne + sideTwo)
+  };
+
+
   var triangleType = function(sideOne, sideTwo, sideThree){
     if (sideOne===sideTwo && sideTwo===sideThree) {
       return "equilateral";
@@ -16,9 +22,7 @@ var triangle = function(sideOne, sideTwo, sideThree){
     }
   };
   
-  var isTriangle = function(sideOne, sideTwo, sideThree) {
-    return sideOne <= (sideTwo + sideThree) && sideTwo <= (sideThree + sideOne) && sideThree <= (sideOne + sideTwo)
-  };
+ 
   
   $(document).ready(function() {
     $("form.tri").submit(function(event) {
@@ -32,7 +36,7 @@ var triangle = function(sideOne, sideTwo, sideThree){
       sideTwo = parseInt($("input#sideTwo").val(""));
       sideThree = parseInt($("input#sideThree").val(""));
   
-      $("#results").append(result);
+      $("#results").append(result= triangleType);
       event.preventDefault();
     });
   });
