@@ -15,14 +15,15 @@ var triangle = function(sideOne, sideTwo, sideThree){
 
 
   var triangleType = function(sideOne, sideTwo, sideThree){
-    if (sideOne===sideTwo && sideTwo===sideThree) {
+    if (sideOne==sideTwo && sideTwo==sideThree) {
       return "equilateral";
-    } else if (sideOne===sideTwo || sideOne===sideThree || sideThree===sideTwo) {
+    } else if (sideOne==sideTwo || sideOne==sideThree || sideThree==sideTwo) {
       return "isosceles";
     } else {
       return "scalene";
     }
   };
+ 
   
  
   
@@ -42,5 +43,6 @@ var triangle = function(sideOne, sideTwo, sideThree){
   
       $("#results").append(result= triangleType);
       event.preventDefault();
+      console.log(sideOne,sideTwo)
     });
   });
