@@ -1,7 +1,7 @@
 #p{
     color: red;
 }
-h1{
+h1,h2 {
     text-align: center;
     color: blue;
 }
@@ -9,4 +9,7 @@ h1{
     position: absolute;
     top: 20%;
     left: 35%;
+}
+#results{
+    color: blue;
 }
